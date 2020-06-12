@@ -1,2 +1,5 @@
 ---
 # tasks file for ansible-role-k8s-host-configure
+
+- import_tasks: 010-pre-tasks.yml
+  tags: pre-tasks
