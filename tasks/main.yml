@@ -3,3 +3,6 @@
 
 - import_tasks: 010-pre-tasks.yml
   tags: pre-tasks
+
+- import_tasks: 020-install-helm.yml
+  tags: install-helm

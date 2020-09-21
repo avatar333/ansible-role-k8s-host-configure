@@ -3,5 +3,14 @@
 
 packages:
   - bash-completion
+  - nginx
+  - vim
 
 bashrc_lines: "source <(kubectl completion bash)\nset -o vi"
+
+helm_repos:
+  - name: stable
+    url: https://kubernetes-charts.storage.googleapis.com/
+  - name: haproxytech
+    url: https://haproxytech.github.io/helm-charts
+
