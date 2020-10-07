@@ -22,3 +22,19 @@
     line: "{{ bashrc_lines }}"
     state: present
     insertafter: EOF
+
+- name: Create flannel directory
+  file:
+    path: /run/flannel
+    state: directory
+    mode: '0755'
+
+- name: Create flannel network file
+  copy:
+    dest: /run/flannel/subnet.env
+    content: |
+      FLANNEL_NETWORK=10.244.0.0/16
+      FLANNEL_SUBNET=10.244.0.1/24
+      FLANNEL_MTU=1450
+      FLANNEL_IPMASQ=true
+    mode: '0755'
