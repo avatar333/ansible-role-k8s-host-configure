@@ -10,7 +10,8 @@ bashrc_lines: "source <(kubectl completion bash)\nset -o vi"
 
 helm_repos:
   - name: stable
-    url: https://kubernetes-charts.storage.googleapis.com/
+    url: https://charts.helm.sh/stable
+    #    url: https://kubernetes-charts.storage.googleapis.com/
   - name: haproxytech
     url: https://haproxytech.github.io/helm-charts
 
